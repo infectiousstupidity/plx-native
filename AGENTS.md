@@ -186,6 +186,17 @@ the macOS simulator are valuable, but they cannot prove every device behavior.
 - Use the `which-tier` skill to choose between host checks, `ui-sim`, and real-device verification.
   Pixel output, LG text rasterization, video-plane composition, performance, and native playback
   generally need the TV before being called verified.
+- **Every UI implementation must inspect native simulator screenshots, not just run tests.**
+  Follow `.agents/skills/ui-sim/SKILL.md`: reproduce the affected screen/state with mock/demo data,
+  capture at the authored 1920x1080 size, open and visually inspect the result, fix defects, and
+  recapture. Check only relevant variants (e.g. long titles, focus, open panels, play/pause/seek);
+  for a visual regression, compare before/after when reproducible. Prefer existing scene triggers
+  and targeted captures; do not add broad snapshot suites or rewrite documentation screenshots.
+  Windows `tools/sim.ps1` covers UI/navigation but **not live playback HUD states**: use the
+  macOS simulator's clocksink/simvideo player scene or the actual TV for those pixels.
+  The handoff/PR must say which captures were actually inspected, how they were produced, and
+  which device-only checks remain. If a required state cannot be captured, report that gap
+  explicitly instead of calling it visually verified. A simulator shot is not TV verification.
 - **A frame drop is diagnosed with the tools that point at it, not guessed at.** Any late frame, fps
   dip or "I see it stutter" on the TV goes straight to the `profile-tv` skill: Mali HWCNT, the
   every-frame legs and `tools/tv-sched-trace.sh`, attributing the late frames' time before any cause
