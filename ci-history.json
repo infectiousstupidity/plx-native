@@ -1,10 +1,14 @@
-{"updated":"2026-10-22T15:19:32Z",
+{"updated":"2026-10-22T15:29:09Z",
 "ci":[
 {"id":39680998992,"at":"2026-10-21T21:42:52Z","sha":"01ec0f469","title":"Merge branch 'GLinnik21:main' into main","pr":null,"conclusion":"failure","attempt":1,"jobs":{"which gates apply":4,"host lint + type-checks":204,"host harness tests":109,"armv7 cross-build and artifact assertions":398,"cross-build (armv7) + artifact assertions":3},"failed":["host checks (NOT a device gate)","host python/shell/C gates","host unit tests (default features)","host unit tests (hostsim)"]},
 {"id":39724111647,"at":"2026-10-22T04:45:05Z","sha":"7a00a0575","title":"Merge branch 'GLinnik21:main' into main","pr":null,"conclusion":"failure","attempt":1,"jobs":{"which gates apply":6,"host lint + type-checks":150,"armv7 cross-build and artifact assertions":335,"host harness tests":110,"cross-build (armv7) + artifact assertions":3},"failed":["host checks (NOT a device gate)","host python/shell/C gates","host unit tests (default features)","host unit tests (hostsim)"]},
 {"id":39802833576,"at":"2026-10-22T15:13:49Z","sha":"6d9393104","title":"Merge branch 'GLinnik21:main' into main","pr":null,"conclusion":"failure","attempt":1,"jobs":{"which gates apply":4,"host lint + type-checks":145,"armv7 cross-build and artifact assertions":318,"host harness tests":173,"cross-build (armv7) + artifact assertions":3},"failed":["host checks (NOT a device gate)","host python/shell/C gates","host unit tests (hostsim)"]}
 ],
-"sim":[],
+"sim":[
+{"id":39680999042,"at":"2026-10-21T21:42:52Z","sha":"01ec0f469","title":"Merge branch 'GLinnik21:main' into main","pr":null,"conclusion":"success","attempt":1,"jobs":{"Windows launcher syntax":21,"Linux simulator build + launch":347,"macOS tests against bundled FFmpeg and ASS":368,"macOS simulator build + launch":190}},
+{"id":39724111792,"at":"2026-10-22T04:45:05Z","sha":"7a00a0575","title":"Merge branch 'GLinnik21:main' into main","pr":null,"conclusion":"failure","attempt":1,"jobs":{"macOS tests against bundled FFmpeg and ASS":137,"Linux simulator build + launch":266,"Windows launcher syntax":19},"failed":["macOS simulator build + launch"]},
+{"id":39802833582,"at":"2026-10-22T15:13:49Z","sha":"6d9393104","title":"Merge branch 'GLinnik21:main' into main","pr":null,"conclusion":"failure","attempt":1,"jobs":{"Windows launcher syntax":21,"Linux simulator build + launch":357}}
+],
 "nightly":[],
 "cancelled":{},
 "daily":[]}
